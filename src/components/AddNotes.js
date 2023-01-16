@@ -11,14 +11,14 @@ const AddNotes = () => {
     content: "",
   });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setNote({
       ...note,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     //prevent empty notes
     if (note.title === "" || note.content === "") {
       return alert("Please fill in the form");
@@ -62,7 +62,7 @@ const AddNotes = () => {
           Add
         </button>
       </form>
-      <a href="">Enroll in the course</a>
+      <a href="#">Enroll in the course</a>
     </div>
   );
 };

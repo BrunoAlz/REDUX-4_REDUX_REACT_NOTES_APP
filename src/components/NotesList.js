@@ -12,9 +12,9 @@ const NotesList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchNotesAction());
-  }, []);
+  }, [dispatch]);
   //get data from store
-  const notes = useSelector(storeData => {
+  const notes = useSelector((storeData) => {
     return storeData.notes;
   });
 
@@ -22,7 +22,7 @@ const NotesList = () => {
     <>
       <h1>Notes List</h1>
 
-      {notes.map(note => (
+      {notes.map((note) => (
         <div key={note.id} className="item-container">
           <div className="item-content">
             <h2>{note.title}</h2>
